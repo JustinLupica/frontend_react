@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Navbar } from './components'
+import { About, Footer, Header, Testimonial, Work, Skills } from './container'
+import { Glow, GlowCapture } from '@codaworks/react-glow'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-primary snap-y'>
+      <Navbar />
+      <GlowCapture>
+        <Glow>
+          <Header />
+        </Glow>
+      </GlowCapture>
+      <About />
+      <Work />
+      <Skills />
+      <Testimonial />
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
