@@ -30,24 +30,38 @@ const Testimonial = () => {
     <div className='flex items-center justify-center flex-col w-full'>
       {testimonials.length > 0 && (
         <>
-          <div className='min-h-80 w-max flex items-center justify-center rounded-lg p-8 bg-white shadow-md transition-all duration-300 ease-in-out'>
+          <div className='min-h-40 max-w-[75vw] w-max flex items-center justify-center rounded-lg p-6 bg-secondary shadow-md transition-all duration-300 ease-in-out'>
             <img
               src={urlFor(test.imageurl)}
               alt='testimonial'
-              className='w-[100px] h-[100px] rounded-full object-cover'
+              className='w-32 h-32 rounded-lg object-cover'
             />
-            <div className='flex flex-1 h-full py-0 px-8 flex-col justify-around items-start'>
-              <p className='text-xl leading-8 text-black font-header'>{test.feedback}</p>
-              <div>
-                <h4 className='font-semibold text-secondary mt-8'>{test.name}</h4>
-                <h5 className='font-normal text-gray mt-[5px]'>{test.company}</h5>
+            <div className='flex flex-1 py-0 px-8 flex-col gap-3 justify-around items-start'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='33.548'
+                height='30'
+                viewBox='0 0 33.548 30'
+                className='fill-gray-300'
+              >
+                <path
+                  id='quote-symbol'
+                  d='M2.816,54.912H17.547v-30L2.816,37.493Zm18.925,0H36.364v-30L21.741,37.493Z'
+                  transform='translate(-2.816 -24.912)'
+                  fill=''
+                />
+              </svg>
+              <p className='text-xl leading-8 text-gray-300 font-header italic'>{test.feedback}</p>
+              <div className='flex flex-col gap-0.5'>
+                <h4 className='font-semibold text-gray-500'>{test.name}</h4>
+                <h5 className='font-normal text-gray-600'>{test.company}</h5>
               </div>
             </div>
           </div>
 
           <div className='flex items-center justify-center mt-4 w-full gap-6'>
             <div
-              className='flex items-center cursor-pointer justify-center w-12 h-12 rounded-full transition-colors duration-200 ease-in-out bg-white hover:bg-secondary hover:text-white text-secondary'
+              className='flex items-center cursor-pointer justify-center w-12 h-12 hover:scale-105 rounded-full transition-all duration-300 ease-in-out bg-secondary hover:bg-secondary hover:text-white text-gray-500'
               onClick={() =>
                 handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)
               }
@@ -55,7 +69,7 @@ const Testimonial = () => {
               <HiChevronLeft className='w-6 h-6' />
             </div>
             <div
-              className='flex items-center cursor-pointer justify-center w-12 h-12 rounded-full transition-colors duration-200 ease-in-out bg-white hover:bg-secondary hover:text-white text-secondary'
+              className='flex items-center cursor-pointer justify-center w-12 h-12 hover:scale-105 rounded-full transition-all duration-300 ease-in-out bg-secondary hover:bg-secondary hover:text-white text-gray-500'
               onClick={() =>
                 handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)
               }
@@ -67,19 +81,23 @@ const Testimonial = () => {
       )}
 
       <div className='flex flex-col justify-center items-center w-full mt-8'>
-        <h2 className='text-4xl text-gray-light font-semibold'>Clients I am proud to have worked with:</h2>
-        <div className='w-4/5 flex-wrap -mt-8 flex items-center justify-center'>
+        <h2 className='text-3xl text-gray-light font-semibold'>
+          Clients I am proud to have worked with:
+        </h2>
+        <div className='w-4/5 flex-wrap mt-8 flex items-center justify-center'>
           {brands.map((brand) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5, type: 'tween' }}
               key={brand.id}
-              className='w-40 m-6'
+              className='w-36 h-36 m-6 flex items-center justify-center p-2 transition-all duration-300 hover:scale-110'
             >
               <img
                 src={urlFor(brand.imgUrl)}
+                height='100px'
+                width='100px'
                 alt={brand.name}
-                className='w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-300'
+                className='w-full h-auto object-cover'
               />
             </motion.div>
           ))}

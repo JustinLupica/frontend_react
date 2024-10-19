@@ -30,7 +30,7 @@ const About = () => {
         <h2 className='font-bold header w-full flex items-center justify-center gap-2 text-4xl my-6'>
           Hi, I'm Justin. Nice to meet you!
         </h2>
-        <p className='text-gray-light text-center text-lg font-header leading-relaxed'>
+        <p className='text-gray-light line-clamp-4 text-center font-display leading-relaxed'>
           {bio[0]?.text}
         </p>
       </div>
@@ -39,10 +39,10 @@ const About = () => {
         // whileInView={{ opacity: 1 }}
         // whileHover={{ scale: 1.05 }}
         // transition={{ duration: 0.25, type: 'tween' }}
-        className='flex flex-1 items-center outline outline-gray/60 rounded-lg  text-gray-light p-4 w-full'
+        className='flex flex-1 flex-col md:flex-row items-center outline outline-gray/60 rounded-lg bg-gray-800/20 text-gray-light p-4 w-full'
         // key={about._id}
       >
-        <div className='border-r border-r-gray/60 flex flex-1 px-3 justify-center items-center flex-col gap-3 h-full'>
+        <div className='md:border-r md:border-r-gray/60 flex flex-1 px-3 justify-center items-center flex-col gap-3 h-full'>
           <span className='p-3 rounded-full bg-accent text-gray-light'>
             <CgIfDesign className='text-6xl' />
           </span>
@@ -90,7 +90,7 @@ const About = () => {
         </div>
       </motion.div>
 
-      <motion.div className='flex w-3/4 flex-wrap justify-evenly items-center gap-x-6 mt-10 gap-y-4'>
+      {/* <motion.div className='flex w-3/4 flex-wrap justify-evenly items-center gap-x-6 mt-10 gap-y-4'>
         {skills.map((skill) => (
           <motion.div
             whileInView={{ opacity: [0, 1] }}
@@ -106,7 +106,7 @@ const About = () => {
             <p className='font-medium mt-2 text-gray-light'>{skill.name}</p>
           </motion.div>
         ))}
-      </motion.div>
+      </motion.div> */}
     </>
   )
 }

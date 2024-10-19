@@ -5,13 +5,11 @@ import { Glow, GlowCapture } from '@codaworks/react-glow'
 
 const App = () => {
   return (
-    <div className='bg-primary snap-y'>
+    <div className='bg-primary snap-y snap-mandatory h-screen'>
       <Navbar />
-      <GlowCapture>
-        <Glow>
-          <Header />
-        </Glow>
-      </GlowCapture>
+
+      <Header />
+
       <About />
       <Work />
       <Skills />

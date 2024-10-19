@@ -18,33 +18,34 @@ const Skills = () => {
   }, [])
 
   return (
-    <div className='flex flex-col flex-1'>
+    <div className='flex flex-col flex-1 justify-center items-center mt-6'>
       <h2 className='text-3xl font-medium font-header w-full text-center header'>
-        Skills & Experience
+        My Most Recent Experience
       </h2>
 
-      <div className='w-full mt-12 flex flex-col-reverse gap-4'>
+      <div className='w-full flex flex-col-reverse gap-4'>
         <motion.div
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.5 }}
-          className='flex flex-1 flex-col gap-3 p-5 mb-4 border border-gray rounded-lg bg-gray/20 text-gray-light'
+          className='flex flex-1 flex-col gap-3 p-5 mb-4 text-gray-light'
         >
-          <h2 className='text-xl text-accent font-semibold'>My Experience</h2>
-          <ol class='relative border-s border-gray-200'>
+          <ol class='relative border-s border-gray-600'>
             {experience.map((experience, i) => (
               <li class='mb-10 ms-4' key={experience._id}>
-                <div class='absolute w-3 h-3 bg-gray rounded-full mt-1.5 -start-1.5 border border-white'></div>
+                <div class='absolute w-3 h-3 bg-gray-600 rounded-full mt-1.5 -start-1.5'></div>
                 <time class='mb-1 text-sm font-normal leading-none text-gray-light/80'>
                   {experience.startYear} - {experience.endYear}
                 </time>
-                <h3 class='text-xl font-semibold text-accent'>{experience.jobTitle}</h3>
+                <h3 class='text-xl font-semibold text-gray-300'>{experience.jobTitle}</h3>
                 <h5 class='text-lg font-medium text-gray-500'>{experience.company}</h5>
-                <ul class='mb-4 text-base font-normal text-gray-300'>
+                <ul class='mb-4 text-base font-normal text-gray-400'>
                   {experience.body.map((item) => (
                     <li key={item._key} class='list-disc ml-5'>
                       {item.children.map((text) =>
                         text.marks.includes('strong') ? (
-                          <strong key={text._key}>{text.text}</strong>
+                          <strong className='underline' key={text._key}>
+                            {text.text}
+                          </strong>
                         ) : (
                           <span key={text._key}>{text.text}</span>
                         )

@@ -7,9 +7,9 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
 
   return (
-    <nav className='flex w-full justify-between items-center py-4 px-8 bg-transparent backdrop-blur-lg border border-white/20 fixed z-50'>
+    <nav className='flex w-full justify-between items-center py-4 px-8 bg-secondary/40 backdrop-blur-lg border-b-2 border-gray-800/75 fixed z-50'>
       <div className='flex justify-start items-center absolute left-3 top-0 bottom-0'>
-        <h1 className='font-logo text-4xl tracking-tight text-accent'>Justin Lupica</h1>
+        <h1 className='text-3xl text-accent'>Justin's Portfolio</h1>
       </div>
 
       {/* Desktop navbar */}
@@ -19,7 +19,7 @@ const Navbar = () => {
             {/* <div className='w-2 h-2 rounded-full hover:bg-accent' /> */}
             <a
               href={`#${item}`}
-              className='text-gray-light uppercase font-semibold transition-all ease-in-out hover:text-accent'
+              className='text-gray-500 uppercase font-semibold transition-all ease-in-out hover:text-accent'
             >
               {item}
             </a>
