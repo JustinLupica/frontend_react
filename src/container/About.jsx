@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { images } from '../constants'
 import { urlFor, client } from '../client'
 import { AppWrap, MotionWrap } from '../wrapper'
-import { GlowCapture, Glow } from '@codaworks/react-glow'
 import { CgIfDesign } from 'react-icons/cg'
 import { FaLaptopCode } from 'react-icons/fa'
 

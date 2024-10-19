@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Tooltip } from 'react-tooltip'
 import { AppWrap, MotionWrap } from '../wrapper'
 import { urlFor, client } from '../client'
-import { GlowCapture, Glow } from '@codaworks/react-glow'
-import { Timeline, TimelineContent, TimelineItem, TimelinePoint } from 'keep-react'
 
 const Skills = () => {
   const [experience, setExperience] = useState([])

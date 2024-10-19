@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
-import { images } from '../constants'
 import { easeInOut, motion } from 'framer-motion'
 
 import { AppWrap, MotionWrap } from '../wrapper'
