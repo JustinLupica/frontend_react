@@ -2,7 +2,7 @@ import { Tooltip } from 'react-tooltip'
 
 const NavigationDots = ({ active }) => {
   return (
-    <div className='flex justify-center items-center flex-col p-4'>
+    <div className='flex justify-center items-center flex-col p-1'>
       {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map((item, index) => (
         <a
           href={`#${item}`}
@@ -17,7 +17,7 @@ const NavigationDots = ({ active }) => {
       <Tooltip
         id='section-nav'
         delayShow={300}
-        className='capitalize font-header !bg-gray-800 transition-all duration-300 ease-in-out font-semibold !rounded-md !shadow'
+        className='hidden md:flex capitalize font-header !bg-gray-800 transition-all duration-300 ease-in-out font-semibold !rounded-md !shadow'
       />
     </div>
   )

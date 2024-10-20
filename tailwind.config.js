@@ -1,15 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
 
-module.exports = {
+import { keepTheme } from 'keep-react/keepTheme'
+
+// const colors = require('tailwindcss/colors')
+
+const config = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     colors: {
-      primary: '#010409',
+      primary: '#111212',
       secondary: '#151b23',
       accent: '#7145ff',
       // accent: '#00377e',
-      black: '#010409',
+      black: '#111212',
       brown: '#46364a',
       white: '#FDFFF7',
       gray: {
@@ -35,3 +38,5 @@ module.exports = {
   },
   plugins: [require('@codaworks/react-glow/tailwind')]
 }
+
+export default keepTheme(config)

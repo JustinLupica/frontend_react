@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { images } from '../constants'
 import { HiMenuAlt4, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 
@@ -14,7 +13,7 @@ const Navbar = () => {
 
       {/* Desktop navbar */}
       <ul className='hidden lg:flex flex-1 justify-center items-center'>
-        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+        {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map((item) => (
           <li key={`link-${item}`} className='mx-4 cursor-pointer flex-col'>
             {/* <div className='w-2 h-2 rounded-full hover:bg-accent' /> */}
             <a
